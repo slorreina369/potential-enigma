@@ -23,6 +23,13 @@ Run 'node index' in the command line
 ## License
 
 
+## Visuals
+
+# Images
+![Screenshot](./assets/images/README-screenshot.png)
+
+# Video
+![Screen Recording](./assets/images/potential-enigma-video.webm)
 
 ## Contributing 
 
@@ -36,4 +43,5 @@ TODO
 
 If you have additional questions, please reach me at slorreina369@gmail.com or slorreina369 on GitHub.
 
-THANK YOU FOR YOUR TIME <3
+THANK YOU FOR YOUR TIME <3b repository containing your application code.
+
