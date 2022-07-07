@@ -32,7 +32,7 @@ const promptQuestions =() =>{
             type:'checkbox',
             name:'license',
             message:'Provide a license for your code, if applicable.',
-            choices:['Apache License 2.0','GNU General Public License v3.0','MIT License','Mozilla Public License 2.0', 'The Unlicense']
+            choices:['Apache License 2.0','GNU General Public License v3.0','MIT License','Mozilla Public License 2.0']
         }, 
         {
             type:'input',
@@ -46,7 +46,7 @@ const promptQuestions =() =>{
         },
         {
             type:'input',
-            name:'questions',
+            name:'email',
             message:'What is your email for further questions?'
         },
         {
