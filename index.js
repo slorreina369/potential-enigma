@@ -8,28 +8,44 @@ const promptQuestions =() =>{
     return inquirer.prompt([
         {
             type:'input',
-            name:'motivation',
-            message:'What is your motivation?'
+            name:'title',
+            message: 'What is this project called?'
         },
         {
             type:'input',
-            name:'reason',
-            message:'Why did you build this project?'
+            name:'description',
+            message:'Describe your code'
+            // will yell at them later for not answering this
         },
         {
             type:'input',
-            name:'problem',
-            message:'What problem does this solve?'
+            name:'installation',
+            message:'How do you install your project ?'
         },
         {
             type:'input',
-            name:'learn',
-            message:'What did you learn?'
+            name:'usage',
+            message:'Provide instructions and examples for use.'
+        },
+        {
+            type:'input',
+            name:'license',
+            message:'Provide a license for your code, if applicable.'
         }, 
         {
             type:'input',
-            name: 'special',
-            message:'What makes your project special?'
+            name: 'contributing',
+            message:"Who worked on this code? Don't be a dick."
+        },
+        {
+            type: 'input',
+            name:'tests',
+            message:"Write tests for your application"
+        },
+        {
+            type:'input',
+            name:'questions',
+            message:'Do you have any more questions that need answers?'
         }
     ]);
 };
