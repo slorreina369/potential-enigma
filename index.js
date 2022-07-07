@@ -6,6 +6,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
 
 const promptQuestions =() =>{
     return inquirer.prompt([
+
         {
             type:'input',
             name:'title',
@@ -28,9 +29,10 @@ const promptQuestions =() =>{
             message:'Provide instructions and examples for use.'
         },
         {
-            type:'input',
+            type:'checkbox',
             name:'license',
-            message:'Provide a license for your code, if applicable.'
+            message:'Provide a license for your code, if applicable.',
+            choices:['Apache License 2.0','GNU General Public License v3.0','MIT License','Mozilla Public License 2.0', 'The Unlicense']
         }, 
         {
             type:'input',
@@ -45,7 +47,20 @@ const promptQuestions =() =>{
         {
             type:'input',
             name:'questions',
-            message:'Do you have any more questions that need answers?'
+            message:'What is your email for further questions?'
+        },
+        {
+            type:'input',
+            name:'github',
+            message:'Enter your GitHub Username',
+            validate: githubInput => {
+                if(githubInput){
+                    return true
+                } else {
+                    console.log('Please enter your username');
+                    return false;
+                }
+            }
         }
     ]);
 };
