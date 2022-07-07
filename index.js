@@ -29,10 +29,10 @@ const promptQuestions =() =>{
             message:'Provide instructions and examples for use.'
         },
         {
-            type:'checkbox',
+            type:'list',
             name:'license',
-            message:'Provide a license for your code, if applicable.',
-            choices:['Apache License 2.0','GNU General Public License v3.0','MIT License','Mozilla Public License 2.0']
+            message:'Provide a license for your code, if applicable.(Pick One)',
+            choices:['Apache License 2.0','GNU General Public License v3.0','MIT License','Mozilla Public License 2.0', 'None']
         }, 
         {
             type:'input',

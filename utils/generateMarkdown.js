@@ -12,16 +12,16 @@ const licenseInfo = {
   },
   'MIT License':{
     badge:'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
-    description:'Liscensed under MIT'
+    description:'Licensed under MIT'
   },
   'Mozilla Public License 2.0':{
     badge:'[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)',
-    description:'Liscensed under MPL 2.0'
+    description:'Licensed under MPL 2.0'
   }
 };
 
 function renderLicenseBadge(license) {
-  if(!license){
+  if(license === 'None'){
     return '';
   }
   return licenseInfo [license].badge
@@ -32,7 +32,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {}
 
 function renderLicenseSection(license) {
-  if(!license){
+  if(license === 'None'){
     return ''
   }
   return licenseInfo [license].description;
@@ -40,42 +40,42 @@ function renderLicenseSection(license) {
 
 function generateMarkdown(data) {
   return `# ${data.title} ${renderLicenseBadge(data.license)}
-  
-  ## Description
-  
-  ${data.description}
 
-  ## Table of Contents
+## Description
 
-    * [Installation](#Installation)
-    * [Usage](#Usage)
-    * [License](#License)
-    * [Tests](#Tests)
-    * [Questions](#Questions)
+${data.description}
 
-  ## Installation
-  
-  ${data.installation}
-  
-  ## Usage
-  
-  ${data.usage}
-  
-  ## License
-  
- ${renderLicenseSection(data.license)}
-  
-  ## Contributing 
-  
-  ${data.contributing}
-  
-  ## Tests
-  
-  ${data.tests}
-  
-  ## Questions
+## Table of Contents
 
-  If you have additional questions, please reach me at ${data.email} or ${data.github}.
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Tests](#Tests)
+* [Questions](#Questions)
+
+## Installation
+
+${data.installation}
+
+## Usage
+
+${data.usage}
+
+## License
+
+${renderLicenseSection(data.license)}
+
+## Contributing 
+
+${data.contributing}
+
+## Tests
+
+${data.tests}
+
+## Questions
+
+If you have additional questions, please reach me at ${data.email} or ${data.github} on GitHub.
 `;
 }
 
